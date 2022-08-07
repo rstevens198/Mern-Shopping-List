@@ -26,7 +26,7 @@ class AppNavbar extends Component {
                 <Navbar color="dark" dark expand="sm" className="mb-5">
                     <Container>
                         <NavbarBrand href="/">ShoppingList</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} />
+                        <NavbarToggler onClick={this.toggle}></NavbarToggler>
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ms-auto" navbar>
                                 <NavItem>
