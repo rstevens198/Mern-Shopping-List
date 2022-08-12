@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const path = require("path");
-=======
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
-const config = require('config')
-<<<<<<< HEAD
->>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
-=======
->>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
 
 const app = express();
 
@@ -19,15 +8,12 @@ const app = express();
 app.use(express.json());
 
 //DB Config
-<<<<<<< HEAD
-<<<<<<< HEAD
 const db = require("./config/keys").mongoURI;
 
 //connect to Mongo
 mongoose
   .connect(db, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
+    useNewURParser: true,
   })
   .then(() => console.log("MongoDb Connected"))
   .catch((err) => console.log(err));
@@ -35,30 +21,7 @@ mongoose
 // Use Routes
 app.use("/api/items", require("./routes/api/items"));
 app.use("/api/users", require("./routes/api/users"));
-=======
-const db = config.get('mongoURI');
-
-//connect to Mongo
-=======
-const db = config.get('mongoURI');
-
-//connect to Mongo
->>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
-mongoose.connect(db, {
-    useNewURParser: true,
-    useCreateIndex: true
-})
-    .then(() => console.log('MongoDb Connected'))
-    .catch(err => console.log(err));
-
-// Use Routes
-app.use('/api/items', require('./routes/api/items'))
-app.use('/api/users', require('./routes/api/users'))
-app.use('/api/auth', require('./routes/api/auth'))
-<<<<<<< HEAD
->>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
-=======
->>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
+app.use("/api/auth", require("./routes/api/auth"));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
