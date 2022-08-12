@@ -8,6 +8,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const config = require('config')
+<<<<<<< HEAD
+>>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
+=======
 >>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
 
 const app = express();
@@ -16,6 +19,7 @@ const app = express();
 app.use(express.json());
 
 //DB Config
+<<<<<<< HEAD
 <<<<<<< HEAD
 const db = require("./config/keys").mongoURI;
 
@@ -35,6 +39,11 @@ app.use("/api/users", require("./routes/api/users"));
 const db = config.get('mongoURI');
 
 //connect to Mongo
+=======
+const db = config.get('mongoURI');
+
+//connect to Mongo
+>>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
 mongoose.connect(db, {
     useNewURParser: true,
     useCreateIndex: true
@@ -46,6 +55,9 @@ mongoose.connect(db, {
 app.use('/api/items', require('./routes/api/items'))
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/auth', require('./routes/api/auth'))
+<<<<<<< HEAD
+>>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
+=======
 >>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
 
 // Serve static assets if in production

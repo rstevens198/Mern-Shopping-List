@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { application } = require("express");
 const express = require("express");
 const router = express.Router();
@@ -15,6 +16,8 @@ router.get("/", (req, res) => {
 
 module.exports = router;
 =======
+=======
+>>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
 const express = require('express');
 const router = express.Router();
 const brypt = require('bcryptjs')
@@ -78,5 +81,9 @@ router.post('/', (req, res) => {
         })
 });
 
+<<<<<<< HEAD
+module.exports = router;
+>>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
+=======
 module.exports = router;
 >>>>>>> parent of b32aa9a (Revert "added jsonwebtoken and auth in the backend")
