@@ -1,44 +1,43 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    Nav,
-    NavItem, NavLink,
-    Container,
-    NavbarBrand
-} from 'reactstrap'
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+  NavbarBrand,
+} from "reactstrap";
 
 class AppNavbar extends Component {
-    state = {
-        isOpen: false
-    }
+  state = {
+    isOpen: false,
+  };
 
-    toggle = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  };
 
-    render() {
-        return (
-            <div>
-                <Navbar color="dark" dark expand="sm" className="mb-5">
-                    <Container>
-                        <NavbarBrand href="/">ShoppingList</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle}></NavbarToggler>
-                        <Collapse isOpen={this.state.isOpen} navbar>
-                            <Nav className="ms-auto" navbar>
-                                <NavItem>
-                                    <NavLink href="https://github.com/rstevens198">Github</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
-                    </Container>
-                </Navbar>
-            </div >
-        );
-    }
+  render() {
+    return (
+      <div>
+        <Navbar color="dark" dark expand="sm" className="mb-5">
+          <NavbarBrand href="/">ShoppingList</NavbarBrand>
+          <NavbarToggler onClick={this.toggle}></NavbarToggler>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ms-auto" navbar>
+              <NavItem>
+                <NavLink href="https://github.com/rstevens198">Github</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
 }
 
 export default AppNavbar;
