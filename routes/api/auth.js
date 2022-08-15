@@ -50,7 +50,6 @@ router.post("/", (req, res) => {
 // @desc    get user data
 // @access  Private
 router.get("/user", auth, (req, res) => {
-  console.log("tester : " + req.user.id);
   User.findById(req.user.id)
     .select("-password")
     .then((user) => res.json(user));
